@@ -21,7 +21,8 @@
 #app__containerOne, #app__containerTwo {
   display: grid;
   place-items: center;
-  height: 100vh;
+  margin-bottom: 5rem;
+  min-height: 100vh;
 }
 
 .app__container {
@@ -43,22 +44,28 @@
   font-size: 3rem;
 }
 
+.app__topContainer>a {
+  font-size: 2rem;
+}
+
 a {
   text-decoration: none;
-  font-size: 2rem;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-.app__privacyNotice {
-  color: red;
+.app__innerContainer {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   border: 1px solid var(--pink01);
   background-color: var(--pink02);
   box-shadow: 0px 0px 10px 5px var(--pink01);
+}
+
+.app__privacyNotice {
+  color: red;
 }
 
 #app__bottomContainer>h2 {
@@ -87,4 +94,22 @@ a:hover {
 .app__button:hover {
   background-color: var(--pink02);
   color: var(--pink01);
+}
+
+.app__footerLinks {
+  list-style: none;
+}
+
+.app__footer {
+  margin: 3rem 0px 2rem 0px;
+  width: 95%;
+}
+
+.app__footerTable {
+  padding: 1rem;
+}
+
+.app__footerLinks {
+  display: inline;
+  padding: 0px 0.5rem;
 }
