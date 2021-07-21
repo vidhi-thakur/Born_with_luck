@@ -11,7 +11,7 @@
 2. Displays error message when data is not valid
 3. Footer redirect to my social media accounts and portfolio 
 
-## Live demo link: 
+## Live demo link: https://60f848f7d985710a64344df3--born-with-luck.netlify.app/
 
 P.S. If you like the repo do give it a star ⭐
 
