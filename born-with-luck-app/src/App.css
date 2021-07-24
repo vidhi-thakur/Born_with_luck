@@ -2,6 +2,7 @@
 
 * {
   font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
 }
 
 :root {
@@ -37,7 +38,7 @@
 
 .app__topContainer {
   opacity: 0.8;
-  height: 180px;
+  min-height: 180px;
 }
 
 .app__topContainer>h1 {
@@ -112,4 +113,18 @@ a:hover {
 .app__footerLinks {
   display: inline;
   padding: 0px 0.5rem;
+}
+
+@media screen and (max-width: 500px) {
+  .app, #app__containerOne, #app__containerTwo, .app__container {
+    width: 100%;
+  }
+
+  .app__innerContainer {
+    width: 95%;
+  }
+
+  #app__bottomContainer {
+    padding: 1rem;
+  }
 }

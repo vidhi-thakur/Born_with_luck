@@ -26,6 +26,7 @@ function App() {
       setLucky(true)
     } else {
       setDisplay(true)
+      setLucky(false)
     }
   }
 
