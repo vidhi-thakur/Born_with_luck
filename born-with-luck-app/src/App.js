@@ -21,11 +21,10 @@ function App() {
       }
     })
     let result = sum % Number(number)
+    setDisplay(true)
     if (result === 0) {
-      setDisplay(true)
       setLucky(true)
     } else {
-      setDisplay(true)
       setLucky(false)
     }
   }
