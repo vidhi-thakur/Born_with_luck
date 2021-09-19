@@ -9,8 +9,8 @@ function App() {
   const [close, setClose] = useState(false)
   const [display, setDisplay] = useState(false)
   const [lucky, setLucky] = useState(false)
-  const [date, setDate] = useState(0)
-  const [number, setNumber] = useState(0)
+  const [date, setDate] = useState("")
+  const [number, setNumber] = useState(null)
 
   const onClickResultHandler = () => {
     const array = date.split("-")
