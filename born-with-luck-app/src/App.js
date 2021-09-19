@@ -10,9 +10,10 @@ function App() {
   const [display, setDisplay] = useState(false)
   const [lucky, setLucky] = useState(false)
   const [date, setDate] = useState("")
-  const [number, setNumber] = useState(null)
+  const [number, setNumber] = useState("")
 
-  const onClickResultHandler = () => {
+  const onClickResultHandler = (e) => {
+    e.preventDefault();
     const array = date.split("-")
     let sum = 0
     array.map(item => {
@@ -20,8 +21,13 @@ function App() {
         sum = sum + Number(item[i])
       }
     })
-    let result = sum % Number(number)
-    setDisplay(true)
+    let result = 0;
+    if(number>0){
+      result = sum % Number(number)
+      setDisplay(true)
+    } else {
+      alert("Enter a valid number!")
+    }
     if (result === 0) {
       setLucky(true)
     } else {
@@ -50,7 +56,7 @@ function App() {
             <p>Enter your Lucky Number:</p>
             <input value={number} onChange={(e) => setNumber(e.target.value)} min="1" className="app__input" type="number" required />
             <br />
-            <button className="app__button" type="submit" onClick={onClickResultHandler}>CHECK</button>
+            <button className="app__button" type="submit" onClick={(e) => onClickResultHandler(e)}>CHECK</button>
           </form>
           {display && <div>
             <p style={{ padding: "1.5rem 0px", fontWeight: "bold" }}>{lucky ? `YAY!! You are a lucky person!` : `Oops!! Your birthday is not a lucky number!`}</p>
@@ -66,7 +72,6 @@ function App() {
           </footer>
         </div>
       </div>
-
     </div>
   );
 }
